@@ -14,6 +14,8 @@
 		BAEDC3391F34591C0060342D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAEDC3371F34591C0060342D /* LaunchScreen.storyboard */; };
 		BAEDC33C1F34591C0060342D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEDC33B1F34591C0060342D /* main.m */; };
 		BAEDC3461F34591C0060342D /* StringReversedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEDC3451F34591C0060342D /* StringReversedTests.m */; };
+		BAEDC3571F3459B80060342D /* TextProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEDC3561F3459B80060342D /* TextProcessor.m */; };
+		BAEDC35C1F3459DB0060342D /* StringReversedMiddleware.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEDC35B1F3459DB0060342D /* StringReversedMiddleware.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,12 @@
 		BAEDC3411F34591C0060342D /* StringReversedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StringReversedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAEDC3451F34591C0060342D /* StringReversedTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringReversedTests.m; sourceTree = "<group>"; };
 		BAEDC3471F34591C0060342D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAEDC3551F3459B80060342D /* TextProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextProcessor.h; sourceTree = "<group>"; };
+		BAEDC3561F3459B80060342D /* TextProcessor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextProcessor.m; sourceTree = "<group>"; };
+		BAEDC35A1F3459DB0060342D /* StringReversedMiddleware.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringReversedMiddleware.h; sourceTree = "<group>"; };
+		BAEDC35B1F3459DB0060342D /* StringReversedMiddleware.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringReversedMiddleware.m; sourceTree = "<group>"; };
+		BAEDC35E1F3459FB0060342D /* Middleware.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Middleware.h; sourceTree = "<group>"; };
+		BAEDC35F1F345A220060342D /* Processor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Processor.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,15 +89,11 @@
 		BAEDC32B1F34591C0060342D /* StringReversed */ = {
 			isa = PBXGroup;
 			children = (
-				BAEDC32C1F34591C0060342D /* AppDelegate.h */,
-				BAEDC32D1F34591C0060342D /* AppDelegate.m */,
-				BAEDC32F1F34591C0060342D /* ViewController.h */,
-				BAEDC3301F34591C0060342D /* ViewController.m */,
-				BAEDC3321F34591C0060342D /* Main.storyboard */,
-				BAEDC3351F34591C0060342D /* Assets.xcassets */,
-				BAEDC3371F34591C0060342D /* LaunchScreen.storyboard */,
 				BAEDC33A1F34591C0060342D /* Info.plist */,
 				BAEDC33B1F34591C0060342D /* main.m */,
+				BAEDC3521F3459830060342D /* Resouce */,
+				BAEDC3501F3459420060342D /* App Delegate */,
+				BAEDC3511F34597D0060342D /* Source */,
 			);
 			path = StringReversed;
 			sourceTree = "<group>";
@@ -101,6 +105,80 @@
 				BAEDC3471F34591C0060342D /* Info.plist */,
 			);
 			path = StringReversedTests;
+			sourceTree = "<group>";
+		};
+		BAEDC3501F3459420060342D /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				BAEDC32C1F34591C0060342D /* AppDelegate.h */,
+				BAEDC32D1F34591C0060342D /* AppDelegate.m */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		BAEDC3511F34597D0060342D /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				BAEDC3541F3459920060342D /* Model */,
+				BAEDC3531F34598E0060342D /* Controllers */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		BAEDC3521F3459830060342D /* Resouce */ = {
+			isa = PBXGroup;
+			children = (
+				BAEDC3321F34591C0060342D /* Main.storyboard */,
+				BAEDC3351F34591C0060342D /* Assets.xcassets */,
+				BAEDC3371F34591C0060342D /* LaunchScreen.storyboard */,
+			);
+			path = Resouce;
+			sourceTree = "<group>";
+		};
+		BAEDC3531F34598E0060342D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BAEDC32F1F34591C0060342D /* ViewController.h */,
+				BAEDC3301F34591C0060342D /* ViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BAEDC3541F3459920060342D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BAEDC35D1F3459E40060342D /* Protocols */,
+				BAEDC3591F3459C20060342D /* Middleware */,
+				BAEDC3581F3459BB0060342D /* Text Processor */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BAEDC3581F3459BB0060342D /* Text Processor */ = {
+			isa = PBXGroup;
+			children = (
+				BAEDC3551F3459B80060342D /* TextProcessor.h */,
+				BAEDC3561F3459B80060342D /* TextProcessor.m */,
+			);
+			path = "Text Processor";
+			sourceTree = "<group>";
+		};
+		BAEDC3591F3459C20060342D /* Middleware */ = {
+			isa = PBXGroup;
+			children = (
+				BAEDC35A1F3459DB0060342D /* StringReversedMiddleware.h */,
+				BAEDC35B1F3459DB0060342D /* StringReversedMiddleware.m */,
+			);
+			path = Middleware;
+			sourceTree = "<group>";
+		};
+		BAEDC35D1F3459E40060342D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BAEDC35E1F3459FB0060342D /* Middleware.h */,
+				BAEDC35F1F345A220060342D /* Processor.h */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +284,8 @@
 				BAEDC3311F34591C0060342D /* ViewController.m in Sources */,
 				BAEDC33C1F34591C0060342D /* main.m in Sources */,
 				BAEDC32E1F34591C0060342D /* AppDelegate.m in Sources */,
+				BAEDC3571F3459B80060342D /* TextProcessor.m in Sources */,
+				BAEDC35C1F3459DB0060342D /* StringReversedMiddleware.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

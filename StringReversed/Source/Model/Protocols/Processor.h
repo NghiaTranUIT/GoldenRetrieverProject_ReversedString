@@ -10,4 +10,6 @@
 
 @protocol Processor <NSObject>
 
+-(NSString *) process:(NSString *) text;
+
 @end

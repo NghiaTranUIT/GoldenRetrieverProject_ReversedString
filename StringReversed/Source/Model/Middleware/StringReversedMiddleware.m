@@ -10,8 +10,8 @@
 
 @implementation StringReversedMiddleware
 
--(NSString *) process:(NSString *) text {
-    
+-(nonnull NSString *) process:(nonnull NSString *) text {
+    return @"";
 }
 
 @end

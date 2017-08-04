@@ -7,7 +7,35 @@
 //
 
 #import "TextProcessor.h"
+#import "Middleware.h"
+
+@interface TextProcessor()
+
+@property (strong, nonatomic) NSArray<Middleware> *middlewares;
+
+@end
 
 @implementation TextProcessor
+
+-(instancetype) initWithMiddleware:(NSArray<Middleware> *)middlewares {
+    self = [super init];
+
+    if (self) {
+        self.middlewares = middlewares;
+    }
+
+    return self;
+}
+-(NSString *) process:(NSString *) text {
+
+    NSString *result = [text copy];
+
+    for (id obj in self.middlewares) {
+//        Middleware middle = (Middleware) obj;
+//        result = [middle process:result];
+    }
+
+    return result;
+}
 
 @end

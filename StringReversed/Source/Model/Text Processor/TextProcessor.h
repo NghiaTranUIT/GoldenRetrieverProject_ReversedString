@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Middleware.h"
+#import "Processor.h"
 
-@interface TextProcessor : NSObject
+@interface TextProcessor : NSObject <Processor>
+
+-(instancetype) initWithMiddleware:(NSArray<Middleware> *) middlewares;
+-(NSString *) process:(NSString *) text;
 
 @end

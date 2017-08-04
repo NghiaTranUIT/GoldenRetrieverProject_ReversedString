@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA0B74311F345E7E000C8694 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0B74301F345E7E000C8694 /* Main.storyboard */; };
+		BA0B74331F345EAC000C8694 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0B74321F345EAC000C8694 /* Launch Screen.storyboard */; };
 		BAEDC32E1F34591C0060342D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEDC32D1F34591C0060342D /* AppDelegate.m */; };
 		BAEDC3311F34591C0060342D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEDC3301F34591C0060342D /* ViewController.m */; };
-		BAEDC3341F34591C0060342D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAEDC3321F34591C0060342D /* Main.storyboard */; };
 		BAEDC3361F34591C0060342D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAEDC3351F34591C0060342D /* Assets.xcassets */; };
-		BAEDC3391F34591C0060342D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAEDC3371F34591C0060342D /* LaunchScreen.storyboard */; };
 		BAEDC33C1F34591C0060342D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEDC33B1F34591C0060342D /* main.m */; };
 		BAEDC3461F34591C0060342D /* StringReversedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEDC3451F34591C0060342D /* StringReversedTests.m */; };
 		BAEDC3571F3459B80060342D /* TextProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEDC3561F3459B80060342D /* TextProcessor.m */; };
@@ -29,14 +29,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA0B74301F345E7E000C8694 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BA0B74321F345EAC000C8694 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		BAEDC3291F34591C0060342D /* StringReversed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StringReversed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAEDC32C1F34591C0060342D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BAEDC32D1F34591C0060342D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BAEDC32F1F34591C0060342D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		BAEDC3301F34591C0060342D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		BAEDC3331F34591C0060342D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BAEDC3351F34591C0060342D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BAEDC3381F34591C0060342D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAEDC33A1F34591C0060342D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAEDC33B1F34591C0060342D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BAEDC3411F34591C0060342D /* StringReversedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StringReversedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,9 +128,9 @@
 		BAEDC3521F3459830060342D /* Resouce */ = {
 			isa = PBXGroup;
 			children = (
-				BAEDC3321F34591C0060342D /* Main.storyboard */,
 				BAEDC3351F34591C0060342D /* Assets.xcassets */,
-				BAEDC3371F34591C0060342D /* LaunchScreen.storyboard */,
+				BA0B74301F345E7E000C8694 /* Main.storyboard */,
+				BA0B74321F345EAC000C8694 /* Launch Screen.storyboard */,
 			);
 			path = Resouce;
 			sourceTree = "<group>";
@@ -261,9 +261,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAEDC3391F34591C0060342D /* LaunchScreen.storyboard in Resources */,
+				BA0B74331F345EAC000C8694 /* Launch Screen.storyboard in Resources */,
+				BA0B74311F345E7E000C8694 /* Main.storyboard in Resources */,
 				BAEDC3361F34591C0060342D /* Assets.xcassets in Resources */,
-				BAEDC3341F34591C0060342D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,25 +306,6 @@
 			targetProxy = BAEDC3421F34591C0060342D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		BAEDC3321F34591C0060342D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BAEDC3331F34591C0060342D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BAEDC3371F34591C0060342D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BAEDC3381F34591C0060342D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BAEDC3481F34591C0060342D /* Debug */ = {
@@ -375,7 +356,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -424,7 +405,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -437,10 +418,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D54Y88Y9CY;
 				INFOPLIST_FILE = StringReversed/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fe.StringReversed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -450,10 +432,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D54Y88Y9CY;
 				INFOPLIST_FILE = StringReversed/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fe.StringReversed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

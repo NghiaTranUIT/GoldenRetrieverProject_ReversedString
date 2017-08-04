@@ -7,6 +7,7 @@
 //
 
 #import "StringReversedMiddleware.h"
+#import "NSArray+Helper.h"
 
 @implementation StringReversedMiddleware
 
@@ -40,11 +41,25 @@
 }
 
 -(NSMutableArray<NSString *> *) toArray:(NSString *) text {
-    return @[];
+    NSRange range = [text rangeOfString:text];
+    NSMutableArray<NSString *> *result = [@[] mutableCopy];
+
+    [text enumerateSubstringsInRange: range
+                                  options:NSStringEnumerationByComposedCharacterSequences
+                               usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
+                                   [result addObject:substring];
+                               }];
+    return [result copy];
 }
 
 -(NSString *) buildStringFromArray:(NSArray<NSString *> *) stringComponents {
-    return @"";
+    return [stringComponents reduceString:@"" combine:^NSString *(NSString *acum, NSString *element) {
+        return [NSString stringWithFormat:@"%@%@", acum, element];
+    }];
 }
 
+
 @end
+
+
+

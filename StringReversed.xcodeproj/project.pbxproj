@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BA0B74311F345E7E000C8694 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0B74301F345E7E000C8694 /* Main.storyboard */; };
 		BA0B74331F345EAC000C8694 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0B74321F345EAC000C8694 /* Launch Screen.storyboard */; };
+		BA0B74371F346420000C8694 /* NSArray+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = BA0B74361F346420000C8694 /* NSArray+Helper.m */; };
 		BAEDC32E1F34591C0060342D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEDC32D1F34591C0060342D /* AppDelegate.m */; };
 		BAEDC3311F34591C0060342D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEDC3301F34591C0060342D /* ViewController.m */; };
 		BAEDC3361F34591C0060342D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAEDC3351F34591C0060342D /* Assets.xcassets */; };
@@ -31,6 +32,8 @@
 /* Begin PBXFileReference section */
 		BA0B74301F345E7E000C8694 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BA0B74321F345EAC000C8694 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		BA0B74351F346420000C8694 /* NSArray+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Helper.h"; sourceTree = "<group>"; };
+		BA0B74361F346420000C8694 /* NSArray+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Helper.m"; sourceTree = "<group>"; };
 		BAEDC3291F34591C0060342D /* StringReversed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StringReversed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAEDC32C1F34591C0060342D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BAEDC32D1F34591C0060342D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -177,6 +180,8 @@
 			children = (
 				BAEDC35E1F3459FB0060342D /* Middleware.h */,
 				BAEDC35F1F345A220060342D /* Processor.h */,
+				BA0B74351F346420000C8694 /* NSArray+Helper.h */,
+				BA0B74361F346420000C8694 /* NSArray+Helper.m */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -283,6 +288,7 @@
 			files = (
 				BAEDC3311F34591C0060342D /* ViewController.m in Sources */,
 				BAEDC33C1F34591C0060342D /* main.m in Sources */,
+				BA0B74371F346420000C8694 /* NSArray+Helper.m in Sources */,
 				BAEDC32E1F34591C0060342D /* AppDelegate.m in Sources */,
 				BAEDC3571F3459B80060342D /* TextProcessor.m in Sources */,
 				BAEDC35C1F3459DB0060342D /* StringReversedMiddleware.m in Sources */,

@@ -43,7 +43,7 @@
 -(NSArray<NSString *> *) toArray:(NSString *) text {
 
     // Prepare
-    NSRange range = [text rangeOfString:text];
+    NSRange range = NSMakeRange(0, [text length]);
     NSMutableArray<NSString *> *result = [@[] mutableCopy];
 
     // Handle emoji and special characters

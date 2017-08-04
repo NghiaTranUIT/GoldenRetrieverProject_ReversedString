@@ -31,8 +31,10 @@
     NSString *result = [text copy];
 
     for (id obj in self.middlewares) {
-//        Middleware middle = (Middleware) obj;
-//        result = [middle process:result];
+
+        id<Middleware> middle = obj;
+
+        result = [middle process:result];
     }
 
     return result;

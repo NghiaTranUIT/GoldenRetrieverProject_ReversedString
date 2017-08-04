@@ -13,6 +13,7 @@
 @interface TextProcessor : NSObject <Processor>
 
 -(instancetype) initWithMiddleware:(NSArray<Middleware> *) middlewares;
+
 -(NSString *) process:(NSString *) text;
 
 @end

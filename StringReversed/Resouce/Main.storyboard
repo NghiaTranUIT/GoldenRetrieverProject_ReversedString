@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="h3y-Q5-5Gl">
             <objects>
-                <viewController id="khv-UN-xfY" sceneMemberID="viewController">
+                <viewController id="khv-UN-xfY" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="apI-3d-bBN"/>
                         <viewControllerLayoutGuide type="bottom" id="KQq-5n-iJw"/>

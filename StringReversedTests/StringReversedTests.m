@@ -7,6 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "TextProcessor.h"
+#import "StringReversedMiddleware.h"
 
 @interface StringReversedTests : XCTestCase
 
@@ -24,16 +26,39 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testNormalText {
+
+    // Given
+    NSString *input = @"abcdefgh";
+    NSString *expected = @"hgfedcba";
+
+    // Process
+    NSString *result = [self processText: input];
+
+    // Assert
+    NSAssert([result isEqualToString:expected], @"Bug");
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+
+- (void)testTextWithMixingEmojiString {
+
+    // Given
+    NSString *input = @"abcdefgh🔥";
+    NSString *expected = @"🔥hgfedcba";
+
+    // Process
+    NSString *result = [self processText: input];
+
+    // Assert
+    NSAssert([result isEqualToString:expected], @"Bug");
 }
 
+-(NSString *) processText:(NSString *) input {
+
+    StringReversedMiddleware *reverseMiddleware = [[StringReversedMiddleware alloc] init];
+    TextProcessor *processor = [[TextProcessor alloc] initWithMiddleware:@[reverseMiddleware]];
+
+    // Process
+    return [processor process:input];
+}
 @end

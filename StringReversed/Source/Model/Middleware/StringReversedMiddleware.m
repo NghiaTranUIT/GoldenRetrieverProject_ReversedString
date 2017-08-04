@@ -14,7 +14,7 @@
 -(nonnull NSString *) process:(nonnull NSString *) text {
 
     // Convert to array
-    NSMutableArray<NSString *> *stringComponents = [self toArray:text];
+    NSMutableArray<NSString *> *stringComponents = [[self toArray:text] mutableCopy];
 
     // Prepare data
     NSUInteger length = stringComponents.count;

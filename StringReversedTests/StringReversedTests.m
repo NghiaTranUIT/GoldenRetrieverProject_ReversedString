@@ -53,10 +53,53 @@
     NSAssert([result isEqualToString:expected], @"Bug");
 }
 
+- (void)testEmojiText {
+
+    // Given
+    NSString *input = @"🔥🤣🏙❤️😀🤗🇯🇵";
+    NSString *expected = @"🇯🇵🤗😀❤️🏙🤣🔥";
+
+    // Process
+    NSString *result = [self processText: input];
+
+    // Assert
+    NSAssert([result isEqualToString:expected], @"Bug");
+}
+
+- (void)testWithLongInput {
+
+    // Given
+    NSString *input = @"You know you should be doing something — whether that’s working on your project, being present with your loved ones, eating healthy, or a number of other things — and you knowingly act in contradictory ways.";
+    NSString *expected = @".syaw yrotcidartnoc ni tca ylgniwonk uoy dna — sgniht rehto fo rebmun a ro ,yhtlaeh gnitae ,seno devol ruoy htiw tneserp gnieb ,tcejorp ruoy no gnikrow s’taht rehtehw — gnihtemos gniod eb dluohs uoy wonk uoY";
+
+    // Process
+    NSString *result = [self processText: input];
+
+    // Assert
+    NSAssert([result isEqualToString:expected], @"Bug");
+}
+
+- (void)testLongInputWithEmoji {
+
+    // Given
+    NSString *input = @"🔥🤣🏙❤️😀🤗🇯🇵Like me, you may justify your behaviors and convince yourself you’re on the path toward your dreams. But an honest look in the mirror would reveal that you’re deceiving yourself. After all, Gandhi also said, “To believe in something, and not to live it, is dishonest.”";
+    NSString *expected = @"”.tsenohsid si ,ti evil ot ton dna ,gnihtemos ni eveileb oT“ ,dias osla ihdnaG ,lla retfA .flesruoy gnivieced er’uoy taht laever dluow rorrim eht ni kool tsenoh na tuB .smaerd ruoy drawot htap eht no er’uoy flesruoy ecnivnoc dna sroivaheb ruoy yfitsuj yam uoy ,em ekiL🇯🇵🤗😀❤️🏙🤣🔥";
+
+    // Process
+    NSString *result = [self processText: input];
+
+    // Assert
+    NSAssert([result isEqualToString:expected], @"Bug");
+}
+
 -(NSString *) processText:(NSString *) input {
 
+    // Create Processor with reverseMiddleware
+    // In future, we can extend our middlewares smoothly
+
     StringReversedMiddleware *reverseMiddleware = [[StringReversedMiddleware alloc] init];
-    TextProcessor *processor = [[TextProcessor alloc] initWithMiddleware:@[reverseMiddleware]];
+    NSArray<Middleware> *middlewares = (NSArray<Middleware> *) @[reverseMiddleware];
+    TextProcessor *processor = [[TextProcessor alloc] initWithMiddleware:middlewares];
 
     // Process
     return [processor process:input];

@@ -40,10 +40,13 @@
     return result;
 }
 
--(NSMutableArray<NSString *> *) toArray:(NSString *) text {
+-(NSArray<NSString *> *) toArray:(NSString *) text {
+
+    // Prepare
     NSRange range = [text rangeOfString:text];
     NSMutableArray<NSString *> *result = [@[] mutableCopy];
 
+    // Handle emoji and special characters
     [text enumerateSubstringsInRange: range
                                   options:NSStringEnumerationByComposedCharacterSequences
                                usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
@@ -53,6 +56,8 @@
 }
 
 -(NSString *) buildStringFromArray:(NSArray<NSString *> *) stringComponents {
+
+    // Reduce
     return [stringComponents reduceString:@"" combine:^NSString *(NSString *acum, NSString *element) {
         return [NSString stringWithFormat:@"%@%@", acum, element];
     }];

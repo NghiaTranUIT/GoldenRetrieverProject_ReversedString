@@ -20,6 +20,7 @@
 -(instancetype) initWithMiddleware:(NSArray<Middleware> *)middlewares {
     self = [super init];
 
+    // Store middleware
     if (self) {
         self.middlewares = middlewares;
     }
@@ -28,12 +29,21 @@
 }
 -(NSString *) process:(NSString *) text {
 
+    // Copy
+    // Best practice when dealing with NSString
     NSString *result = [text copy];
 
+    //
+    // Following SOLID pricinple
+    //
+    // In future, if we add new middleware, we don't need to edit this method anymore.
+    // It's really elegant way, insteand of coding hardcode StringReversedMiddware
     for (id obj in self.middlewares) {
 
         id<Middleware> middle = obj;
 
+        // As each middle which is adapted <Middleware>
+        // It has -process method.
         result = [middle process:result];
     }
 

@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+
+/**
+ Middleware protocol
+ It represents
+ */
 @protocol Middleware <NSObject>
 
 -(NSString *) process:(NSString *) text;

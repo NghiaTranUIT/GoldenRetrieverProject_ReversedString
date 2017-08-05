@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 @protocol Processor <NSObject>
 
 -(NSString *) process:(NSString *) text;

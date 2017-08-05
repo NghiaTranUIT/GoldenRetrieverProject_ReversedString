@@ -9,8 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "Middleware.h"
 
-@interface StringReversedMiddleware : NSObject <Middleware>
 
--(NSString *) process:(NSString *) text;
+/**
+ String Reversed Middleware
+
+ Main purpose is reversed string
+ [Support] Emoji and special characters as well.
+ */
+@interface StringReversedMiddleware : NSObject <Middleware>
 
 @end

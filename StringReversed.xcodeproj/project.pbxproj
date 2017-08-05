@@ -71,6 +71,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BAB5CA1E1F354D2600842732 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BA0B74351F346420000C8694 /* NSArray+Helper.h */,
+				BA0B74361F346420000C8694 /* NSArray+Helper.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		BAEDC3201F34591C0060342D = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +159,7 @@
 		BAEDC3541F3459920060342D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BAB5CA1E1F354D2600842732 /* Extension */,
 				BAEDC35D1F3459E40060342D /* Protocols */,
 				BAEDC3591F3459C20060342D /* Middleware */,
 				BAEDC3581F3459BB0060342D /* Text Processor */,
@@ -180,8 +190,6 @@
 			children = (
 				BAEDC35E1F3459FB0060342D /* Middleware.h */,
 				BAEDC35F1F345A220060342D /* Processor.h */,
-				BA0B74351F346420000C8694 /* NSArray+Helper.h */,
-				BA0B74361F346420000C8694 /* NSArray+Helper.m */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
